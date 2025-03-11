@@ -1,0 +1,27 @@
+
+//Colores primarios
+$blanco: #ffffff;
+$palido: #e8daef;
+$chillon: #c39bd3;
+
+
+//Secundarios
+$morado: #d5bae1;
+$azul: #3d9cd4;
+$gris: #ece9ee;
+$verde: #57cd66;
+
+//Sobreescribir variables de bootstrap
+$primary: $chillon;
+$secondary: $palido;
+$light: $blanco;
+
+.offcanvas {
+    font-family: Roboto;
+    width: 60% !important;
+  }
+  
+.active{
+    background-color: $chillon;
+}
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
