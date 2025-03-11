@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> <!-- Importa Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <style>
-        /* Añadir un estilo para el contenedor principal */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
         .content {
-            min-height: calc(100vh - 200px); /* Ajusta 200px según el tamaño de tu header y footer */
-            padding-bottom: 100px; /* Asegura que no se superponga el footer */
+            flex: 1; /* Permite que el contenido ocupe el espacio restante */
+        }
+        footer {
+            background: blue; /* Color de fondo del footer */
+            width: 100%; /* Asegúrate de que el footer ocupe todo el ancho */
         }
     </style>
 </head>
@@ -19,9 +26,9 @@
         <div class="col-md-2 d-md-block d-none bg-secondary">
             <ul class="navbar-nav">
                 <li><h3 class="text-center my-5">Menú</h3></li>
-                <li class="active px-2 py-1 my-1">Inicio</li>
+                <li class="px-2 py-1 my-1">Inicio</li>
                 <li class="px-2 py-1 my-1">Incidencias</li>
-                <li class="px-2 py-1 my-1">Ajustes</li>
+                <li class="active px-2 py-1 my-1">Ajustes</li>
             </ul>
         </div>
         <div class="col-12 col-md-10 position-relative p-0 content">
@@ -29,7 +36,7 @@
                 <div class="img"></div>
             </header>
             <main>
-                <nav class="d-flex justify-content-between bg-light my-4 container m-auto">
+                <nav class="d-flex justify-content-between bg-light my-4 container m-auto d-md-none">
                     <button class="btn btn-secondary btn-redondo fs-1 d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                        ☰            
                     </button>
@@ -37,60 +44,30 @@
                         <i class="bi bi-person-plus fs-1"></i>
                     </button>
                 </nav>
-
-                <div class="text-center mb-5">
-                    <h1 class="title">Bienvenido al Gestor de Incidencias</h1>
-                    <p class="subtitle my-4">Administra y reporta problemas de forma rápida y eficiente.</p>
-                    <a href="" class="btn-mod-primary">Ir al Panel</a>
-                </div>
-a   
-                <div class="row container m-auto g-3">
-                    <a href="seguimiento.html" class="col-6 col-md-4 m-auto my-3">
-                        <div class="card m-auto bg-primary">
-                            <div class="card-body w-100">
-                                <p>Seguimiento de incidencias</p>
-                            </div>
+                <div class="text-center mb-5 container">
+                    <h1 class="title mt-2">Configuración de la Aplicación</h1>
+                    <p class="subtitle my-4">Configurar la aplicación, según tus gustos.</p>
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="tema" class="form-label">Cambiar Tema</label>
+                            <select name="" id="" class="form-select w-100 mod-select">
+                                <option value="">Claro</option>
+                                <option value="">Oscuro</option>
+                            </select>
                         </div>
-                    </a>
-                    <a href="diarias.html" class="col-6 col-md-4 m-auto my-3">
-                        <div class="card m-auto bg-secondary">
-                            <div class="card-body w-100">
-                                <p>Numero de Incidencias al día</p>
-                            </div>
+                        <div class="mb-3">
+                            <label for="tema" class="form-label">Notificaciones</label>
+                            <select name="" id="" class="form-select w-100 mod-select">
+                                <option value="">Activadas</option>
+                                <option value="">Desactivadas</option>
+                            </select>
                         </div>
-                    </a>
-                    <a href="ultimas.html" class="col-6 col-md-4 m-auto my-3">
-                        <div class="card m-auto bg-primary">
-                            <div class="card-body w-100">
-                                <p>Últimas Incidencias registradas</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="porcentaje.html" class="col-6 col-md-4 m-auto my-3">
-                        <div class="card m-auto bg-secondary">
-                            <div class="card-body w-100">
-                                <p>Porcentaje de Incidencias</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="" class="col-6 col-md-4 m-auto my-3">
-                        <div class="card m-auto bg-primary">
-                            <div class="card-body w-100">
-                                <p>Estadísticas generales</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="promedio" class="col-6 col-md-4 m-auto my-3">
-                        <div class="card m-auto bg-secondary">
-                            <div class="card-body w-100">
-                                <p>Tiempo Promedio de Resolución</p>
-                            </div>
-                        </div>
-                    </a>
+                    </form>
+                    <br>
+                    <a href="" class="btn-mod-primary">Guardar Cambios</a>
                 </div>
             </main>
-
-            <footer class="bg-primary w-100">
+            <footer class="bg-primary">
                 <div class="container">
                     <div class="row justify-content-center align-items-start text-md-start">
                         <div class="col-12 col-md-4 mt-3 text-center">
@@ -99,7 +76,7 @@ a
                                 <li class="nav-item">Somos una empresa dedicada a la gestión de incidencias</li>
                             </ul>
                         </div>
-                        <div class="col-12 col-md-4 mt-3 text-center m-2">
+                        <div class="col-12 col-md-4 mt-3 text-center">
                             <ul class="navbar-nav">
                                 <li><h3 class="fw-bolder">Enlaces de Interés</h3></li>
                                 <li class="nav-item">Inicio</li>
@@ -107,7 +84,7 @@ a
                                 <li class="nav-item">Politica de privacidad</li>
                             </ul>
                         </div>
-                        <div class="col col-md-4 mt-3 text-center">
+                        <div class="col-12 col-md-4 mt-3 text-center">
                             <ul class="navbar-nav">
                                 <li><h3 class="fw-bolder">Contáctanos</h3></li>
                                 <li class="nav-item">Email: email@gmail.com</li>

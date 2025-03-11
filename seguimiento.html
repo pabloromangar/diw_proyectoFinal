@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Importa Bootstrap Icons -->
+</head>
+
+<body style="min-height: 100vh;">
+    <div class="row p-0 m-0">
+        <div class="col-md-2 d-md-block d-none bg-secondary">
+            <ul class="navbar-nav">
+                <li>
+                    <h3 class="text-center my-5">Menú</h3>
+                </li>
+                <li class="px-2 py-1 my-1">Inicio</li>
+                <li class="active px-2 py-1 my-1">Incidencias</li>
+                <li class="px-2 py-1 my-1">Ajustes</li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-10 position-relative p-0 content">
+            <header>
+                <div class="img"></div>
+            </header>
+            <main>
+                <nav class="d-flex justify-content-between bg-light my-4 container m-auto d-md-none">
+                    <button class="btn btn-secondary btn-redondo fs-1 d-md-none" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        ☰
+                    </button>
+                    <button class="btn btn-secondary btn-redondo">
+                        <i class="bi bi-person-plus fs-1"></i>
+                    </button>
+                </nav>
+                <div class="text-center mb-5">
+                    <h1 class="title">Seguimiento de incidencias</h1>
+                    <p class="subtitle my-4">Incidencias en seguimiento, aún sin completar</p>
+                </div>
+                <div class="row container m-auto">
+                    <div class="col-12 col-md-4 my-3">
+                        <div class="card bg-secondary m-auto">
+                            <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                                <h2 class="card-title">Procesando</h2>
+                                <i class="bi bi-arrow-down fs-1"></i>
+                                <p>PC de la oficina central no tiene memoria suficiente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 my-3">
+                        <div class="card bg-primary m-auto">
+                            <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                                <h2 class="card-title">Procesando</h2>
+                                <i class="bi bi-arrow-down fs-1"></i>
+                                <p>Servidor de gestiones inavilitado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 my-3">
+                        <div class="card bg-secondary m-auto">
+                            <div class="card-body d-flex flex-column justify-content-between align-items-center">
+                                <h2 class="card-title">Procesando</h2>
+                                <i class="bi bi-arrow-down fs-1"></i>
+                                <p>Cafeter de la cafeteria no funciona</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="bg-primary w-100 position-relative bottom-0">
+                <div class="container">
+                    <div class="row justify-content-center align-items-start text-md-start">
+                        <div class="col-12 col-md-4 mt-3 text-center">
+                            <ul class="navbar-nav">
+                                <li>
+                                    <h3 class="fw-bolder">Sobre Nosotros</h3>
+                                </li>
+                                <li class="nav-item">Somos una empresa dedicada a la gestión de incidencias</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 text-center">
+                            <ul class="navbar-nav">
+                                <li>
+                                    <h3 class="fw-bolder">Enlaces de Interés</h3>
+                                </li>
+                                <li class="nav-item">Inicio</li>
+                                <li class="nav-item">Aviso legal</li>
+                                <li class="nav-item">Politica de privacidad</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-4 mt-3 text-center">
+                            <ul class="navbar-nav">
+                                <li>
+                                    <h3 class="fw-bolder">Contáctanos</h3>
+                                </li>
+                                <li class="nav-item">Email: email@gmail.com</li>
+                                <li class="nav-item">Tlf:609 98 90 12</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 text-center mt-3">
+                            <p>&copy; 2025 GestiónIncidencias. Todos los derechos reservados</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start bg-secondary" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <h1 class="text-center">Menú</h1>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active fw-bolder" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-1" href="#">Incidencias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-1" href="#">Ajustes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-1" href="#">Panel de incidencias</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>

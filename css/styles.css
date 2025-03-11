@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-VariableFont_wdth,wght.ttf);
+}
+@font-face {
+  font-family: "Scope-one";
+  src: url(../fonts/ScopeOne-Regular.ttf);
+}
 .offcanvas {
   font-family: Roboto;
   width: 60% !important;
@@ -6,6 +14,168 @@
 
 .active {
   background-color: #c39bd3;
+}
+
+body {
+  font-family: "Scope-one";
+  letter-spacing: 0.05rem;
+}
+
+p,
+a {
+  font-family: "Roboto";
+}
+
+ul {
+  font-family: "Roboto";
+}
+
+.nav-item {
+  padding-left: 1rem;
+}
+.nav-item:hover {
+  background-color: #c39bd3;
+}
+
+@media screen and (min-width: 768px) {
+  .img {
+    background-size: 30rem;
+    height: 180px;
+  }
+}
+.btn-redondo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem !important;
+}
+
+body {
+  font-family: "Scope-one";
+  line-height: 2;
+}
+
+.img {
+  background-image: url("../img/image%204.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 16rem;
+  margin: auto;
+  height: 100px;
+}
+
+.btn-mod-primary,
+.btn-mod-secondary {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 30px;
+  border-radius: 30px;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-mod-primary {
+  background-color: #c39bd3;
+}
+
+.btn-mod-secondary {
+  background-color: #e8daef;
+}
+
+.card {
+  border: none !important;
+  border-radius: 2rem !important;
+  height: 400px !important;
+  text-align: center;
+  padding-top: 2rem !important;
+  font-size: 1.6rem;
+  max-width: 300px;
+}
+
+header {
+  background-color: #beade2;
+}
+
+.content {
+  min-height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+select,
+input {
+  color: black;
+  background-color: #ece9ee !important;
+  border: none !important;
+  height: 40px;
+  border-radius: 40px !important;
+}
+
+.title {
+  font-family: "Scope-one";
+}
+
+.card-title {
+  background-color: #ffffff;
+  width: 75%;
+  border-radius: 1.8rem;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+.login-input {
+  background-color: transparent !important;
+  border-bottom: 3px solid #ece9ee !important;
+  border-radius: 0px !important;
+}
+
+.login {
+  position: fixed;
+  width: 30rem !important;
+  left: 1rem;
+  position: absolute;
+  max-width: 1000px;
+}
+@media screen and (min-width: 768px) {
+  .login {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.login > form {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+@media screen and (min-width: 768px) {
+  .login > form {
+    border-radius: 3rem !important;
+  }
+}
+
+.logo {
+  position: fixed !important;
+  width: 13rem !important;
+  height: 18rem !important;
+  left: 0;
+  top: 8rem;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    position: static !important;
+    display: block;
+  }
+}
+
+.login a {
+  color: #3d9cd4;
+  text-decoration: none;
 }
 
 /*!
@@ -41,7 +211,7 @@
   --bs-primary: #c39bd3;
   --bs-secondary: #e8daef;
   --bs-success: #198754;
-  --bs-info: #0dcaf0;
+  --bs-info: #ece9ee;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #ffffff;
@@ -49,7 +219,7 @@
   --bs-primary-rgb: 195, 155, 211;
   --bs-secondary-rgb: 232, 218, 239;
   --bs-success-rgb: 25, 135, 84;
-  --bs-info-rgb: 13, 202, 240;
+  --bs-info-rgb: 236, 233, 238;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 255, 255, 255;
@@ -57,7 +227,7 @@
   --bs-primary-text-emphasis: rgb(78, 62, 84.4);
   --bs-secondary-text-emphasis: rgb(92.8, 87.2, 95.6);
   --bs-success-text-emphasis: rgb(10, 54, 33.6);
-  --bs-info-text-emphasis: rgb(5.2, 80.8, 96);
+  --bs-info-text-emphasis: rgb(94.4, 93.2, 95.2);
   --bs-warning-text-emphasis: rgb(102, 77.2, 2.8);
   --bs-danger-text-emphasis: rgb(88, 21.2, 27.6);
   --bs-light-text-emphasis: #495057;
@@ -65,7 +235,7 @@
   --bs-primary-bg-subtle: rgb(243, 235, 246.2);
   --bs-secondary-bg-subtle: rgb(250.4, 247.6, 251.8);
   --bs-success-bg-subtle: rgb(209, 231, 220.8);
-  --bs-info-bg-subtle: rgb(206.6, 244.4, 252);
+  --bs-info-bg-subtle: rgb(251.2, 250.6, 251.6);
   --bs-warning-bg-subtle: rgb(255, 242.6, 205.4);
   --bs-danger-bg-subtle: rgb(248, 214.6, 217.8);
   --bs-light-bg-subtle: rgb(251.5, 252, 252.5);
@@ -73,7 +243,7 @@
   --bs-primary-border-subtle: rgb(231, 215, 237.4);
   --bs-secondary-border-subtle: rgb(245.8, 240.2, 248.6);
   --bs-success-border-subtle: rgb(163, 207, 186.6);
-  --bs-info-border-subtle: rgb(158.2, 233.8, 249);
+  --bs-info-border-subtle: rgb(247.4, 246.2, 248.2);
   --bs-warning-border-subtle: rgb(255, 230.2, 155.8);
   --bs-danger-border-subtle: rgb(241, 174.2, 180.6);
   --bs-light-border-subtle: #e9ecef;
@@ -153,7 +323,7 @@
   --bs-primary-text-emphasis: rgb(219, 195, 228.6);
   --bs-secondary-text-emphasis: rgb(241.2, 232.8, 245.4);
   --bs-success-text-emphasis: rgb(117, 183, 152.4);
-  --bs-info-text-emphasis: rgb(109.8, 223.2, 246);
+  --bs-info-text-emphasis: rgb(243.6, 241.8, 244.8);
   --bs-warning-text-emphasis: rgb(255, 217.8, 106.2);
   --bs-danger-text-emphasis: rgb(234, 133.8, 143.4);
   --bs-light-text-emphasis: #f8f9fa;
@@ -161,7 +331,7 @@
   --bs-primary-bg-subtle: rgb(39, 31, 42.2);
   --bs-secondary-bg-subtle: rgb(46.4, 43.6, 47.8);
   --bs-success-bg-subtle: rgb(5, 27, 16.8);
-  --bs-info-bg-subtle: rgb(2.6, 40.4, 48);
+  --bs-info-bg-subtle: rgb(47.2, 46.6, 47.6);
   --bs-warning-bg-subtle: rgb(51, 38.6, 1.4);
   --bs-danger-bg-subtle: rgb(44, 10.6, 13.8);
   --bs-light-bg-subtle: #343a40;
@@ -169,7 +339,7 @@
   --bs-primary-border-subtle: rgb(117, 93, 126.6);
   --bs-secondary-border-subtle: rgb(139.2, 130.8, 143.4);
   --bs-success-border-subtle: rgb(15, 81, 50.4);
-  --bs-info-border-subtle: rgb(7.8, 121.2, 144);
+  --bs-info-border-subtle: rgb(141.6, 139.8, 142.8);
   --bs-warning-border-subtle: rgb(153, 115.8, 4.2);
   --bs-danger-border-subtle: rgb(132, 31.8, 41.4);
   --bs-light-border-subtle: #495057;
@@ -1981,13 +2151,13 @@ progress {
 
 .table-info {
   --bs-table-color: #000;
-  --bs-table-bg: rgb(206.6, 244.4, 252);
-  --bs-table-border-color: rgb(165.28, 195.52, 201.6);
-  --bs-table-striped-bg: rgb(196.27, 232.18, 239.4);
+  --bs-table-bg: rgb(251.2, 250.6, 251.6);
+  --bs-table-border-color: rgb(200.96, 200.48, 201.28);
+  --bs-table-striped-bg: rgb(238.64, 238.07, 239.02);
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: rgb(185.94, 219.96, 226.8);
+  --bs-table-active-bg: rgb(226.08, 225.54, 226.44);
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: rgb(191.105, 226.07, 233.1);
+  --bs-table-hover-bg: rgb(232.36, 231.805, 232.73);
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3028,19 +3198,19 @@ textarea.form-control-lg {
 
 .btn-info {
   --bs-btn-color: #000;
-  --bs-btn-bg: #0dcaf0;
-  --bs-btn-border-color: #0dcaf0;
+  --bs-btn-bg: #ece9ee;
+  --bs-btn-border-color: #ece9ee;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(49.3, 209.95, 242.25);
-  --bs-btn-hover-border-color: rgb(37.2, 207.3, 241.5);
-  --bs-btn-focus-shadow-rgb: 11, 172, 204;
+  --bs-btn-hover-bg: rgb(238.85, 236.3, 240.55);
+  --bs-btn-hover-border-color: rgb(237.9, 235.2, 239.7);
+  --bs-btn-focus-shadow-rgb: 201, 198, 202;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(61.4, 212.6, 243);
-  --bs-btn-active-border-color: rgb(37.2, 207.3, 241.5);
+  --bs-btn-active-bg: rgb(239.8, 237.4, 241.4);
+  --bs-btn-active-border-color: rgb(237.9, 235.2, 239.7);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #0dcaf0;
-  --bs-btn-disabled-border-color: #0dcaf0;
+  --bs-btn-disabled-bg: #ece9ee;
+  --bs-btn-disabled-border-color: #ece9ee;
 }
 
 .btn-warning {
@@ -3163,19 +3333,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-info {
-  --bs-btn-color: #0dcaf0;
-  --bs-btn-border-color: #0dcaf0;
+  --bs-btn-color: #ece9ee;
+  --bs-btn-border-color: #ece9ee;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #0dcaf0;
-  --bs-btn-hover-border-color: #0dcaf0;
-  --bs-btn-focus-shadow-rgb: 13, 202, 240;
+  --bs-btn-hover-bg: #ece9ee;
+  --bs-btn-hover-border-color: #ece9ee;
+  --bs-btn-focus-shadow-rgb: 236, 233, 238;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #0dcaf0;
-  --bs-btn-active-border-color: #0dcaf0;
+  --bs-btn-active-bg: #ece9ee;
+  --bs-btn-active-border-color: #ece9ee;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0dcaf0;
+  --bs-btn-disabled-color: #ece9ee;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0dcaf0;
+  --bs-btn-disabled-border-color: #ece9ee;
   --bs-gradient: none;
 }
 
@@ -6827,8 +6997,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-info-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-info:hover, .link-info:focus {
-  color: RGBA(61, 213, 243, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(61, 213, 243, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(240, 237, 241, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(240, 237, 241, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-warning {
@@ -11852,62 +12022,6 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-.btn-redondo {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 2rem;
-}
-
-@font-face {
-  font-family: "Scope-one";
-  src: url(../fonts/ScopeOne-Regular.ttf);
-}
-body {
-  font-family: "Scope-one";
-  line-height: 2;
-}
-
-.img {
-  background-image: url("../img/image%204.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 16rem;
-  margin: auto;
-  height: 100px;
-}
-
-.content {
-  min-height: 100vh;
-}
-
-@media screen and (min-width: 768px) {
-  .img {
-    background-size: 30rem;
-    height: 180px;
-  }
-}
-header {
-  background-color: #beade2;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url(../fonts/Roboto-VariableFont_wdth,wght.ttf);
-}
-body {
-  font-family: "Scope-one";
-}
-
-ul {
-  font-family: Roboto;
-}
-
-.nav-item {
-  padding-left: 1rem;
-}
-.nav-item:hover {
-  background-color: #c39bd3;
 }
 
 /*# sourceMappingURL=styles.css.map */
